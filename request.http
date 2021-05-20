@@ -1,0 +1,51 @@
+
+### Categorias
+GET http://localhost:3000/api/categories/
+
+
+### Restaurants
+GET http://localhost:3000/api/restaurants
+
+
+### Restaurants ID
+GET http://localhost:3000/api/restaurants/10
+
+
+### Restaurants query
+GET http://localhost:3000/api/restaurants?q=bravo
+
+
+### Restaurants with filters
+GET http://localhost:3000/api/restaurants?category=mexicana&city=Curitiba
+
+
+### Avaliable_Cities
+GET http://localhost:3000/api/available_cities
+
+
+### Order
+POST http://localhost:3000/api/orders
+content-type: application/json
+
+{
+    "order" : {
+        "name": "Carlos Doki",
+        "phone_number": "11994562226",
+        "restaurant_id" : 10,
+        "street": "Alberto Willo",
+        "neighborhood" : "Planalto Paulista",
+        "city" : "São Paulo",
+        "number" : 549,
+        "complement" : "",
+        "order_products_attributes" : [
+            {
+                "quantity" : 1,
+                "product_id" : 18
+            }
+        ]
+    }
+}
+
+
+### Order
+GET http://localhost:3000/api/orders/1
